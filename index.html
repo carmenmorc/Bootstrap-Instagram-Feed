@@ -8,6 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <!-- No encontraba la forma de poner la tab activa en negro usando solo Bootstrap-->
+    <style>
+      .nav-link.active {
+        color: black !important; 
+      }
+    </style>
+    <!-- -->
+
   </head>
   <body style="font-family:'Teachers', sans-serif;">
 
@@ -15,7 +24,7 @@
 
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand ms-2" href="#">
             <!-- TÍTULO Y LOGO-->
             <i class="fa-brands fa-instagram"></i>
             Instagram
@@ -24,7 +33,7 @@
             <div class="d-inline">
               <!-- CREATE A NEW POST -->
               <!-- BOTÓN -->
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: green; color: white; border-width: 0px;">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Create a new post
               </button>
               <!-- MODAL -->
@@ -37,26 +46,26 @@
                   </div>
                 <div class="modal-body">
                   Caption:
-                  <textarea class="form-control" rows="2" placeholder="Add the caption of your post here" style="margin-top: 10px;"></textarea>
-                  <button type="button" class="btn" style="background-color: lightgrey; color: white; margin-top: 10px;"><i class="fa-solid fa-camera"></i></button>
-                  <button type="button" class="btn" style="background-color: lightgrey; color: white; margin-top: 10px;"><i class="fa-solid fa-location-dot"></i></button>
+                  <textarea class="form-control mt-2" rows="2" placeholder="Add the caption of your post here"></textarea>
+                  <button type="button" class="btn btn-secondary mt-2" ><i class="fa-solid fa-camera"></i></button>
+                  <button type="button" class="btn btn-secondary mt-2" ><i class="fa-solid fa-location-dot"></i></button>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn" data-bs-dismiss="modal" style="background-color: grey; color: white;">Close</button>
-                  <button type="button" class="btn" style="background-color: green; color: white;">Publish</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success">Publish</button>
                 </div>
               </div>
             </div>
           </div>
               <!-- SETTINGS -->
               <div class="dropdown d-inline">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: gray; color: white; border-width: 0;"><i class="fa-solid fa-gear"></i></button>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-right" style="margin-top: 15px;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-right mt-3">
                   <li><a class="dropdown-item" href="#">Profile</a></li>
                   <li><a class="dropdown-item" href="#">Accessibility</a></li>
                   <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#" style="color: red;">Log out</a></li>
+                  <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                 </ul>
               </div>
             </div>
@@ -71,19 +80,20 @@
     <div class="container mt-5">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#grid" role="tab" aria-current="page" style="color: grey;"><i class="fa-solid fa-table-cells"></i></a>
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#grid" role="tab" aria-current="page" href="#"><i class="fa-solid fa-table-cells"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#post" role="tab" style="color: grey;"><i class="fa-regular fa-square"></i></a>
+          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#post" role="tab" href="#"><i class="fa-regular fa-square"></i></a>
         </li>
       </ul>
+    </div>
 
 
     <!-- /ELEGIR DISPLAY-->
 
     
     <!-- GRID -->
-    <div class="tab-content mt-3" id="myTabsContent">
+    <div class="tab-content m-2" id="myTabsContent">
     <div class="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
     <div class="grid">
       <div class="row">
@@ -145,7 +155,6 @@
     <!-- /GRID-->
 
 
-
     <!-- POSTS-->
 
     <div class="tab-content mt-3" id="myTabsContent">
@@ -155,7 +164,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g153d8808a70e3ac80924d50cc7f31b2c6fdf0cfd8ce681b5827805b9958c19d6a12f0e1a1bee957d1629357239959ee0_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g153d8808a70e3ac80924d50cc7f31b2c6fdf0cfd8ce681b5827805b9958c19d6a12f0e1a1bee957d1629357239959ee0_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -166,7 +175,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g11c640bc5411e89b156e3101a9c84c114d024ef3796f3be730a4146b6570f628517fdc841830f4a94413436ec008e3f8_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g11c640bc5411e89b156e3101a9c84c114d024ef3796f3be730a4146b6570f628517fdc841830f4a94413436ec008e3f8_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -177,7 +186,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g532e9b86b3b6bcecc766b28dc66bf908e846ae47cf4b16f8376fdc19e26c4b994c4718dbef2756ee9a80dd9178a327d5_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g532e9b86b3b6bcecc766b28dc66bf908e846ae47cf4b16f8376fdc19e26c4b994c4718dbef2756ee9a80dd9178a327d5_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -188,7 +197,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g29756ec15ef634ecf8326ddc6861ad164cda975eb20f8145161bf4d3cf700732ec8dce74c2833ff44dbeb96df6099783_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g29756ec15ef634ecf8326ddc6861ad164cda975eb20f8145161bf4d3cf700732ec8dce74c2833ff44dbeb96df6099783_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -199,7 +208,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g8903c086bd0ab3c739ad1e148d007dc5d4566fecf775c6a476620d7f76c68eae57a43451b4fe361a8ef8515d0224ba8a_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g8903c086bd0ab3c739ad1e148d007dc5d4566fecf775c6a476620d7f76c68eae57a43451b4fe361a8ef8515d0224ba8a_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -210,7 +219,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g2e8da18aee0bd8533f06fe46380c8718b0d6ecc247cd1beac557398fdda887c8b3c1db248822716206c61ef822daddd1_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g2e8da18aee0bd8533f06fe46380c8718b0d6ecc247cd1beac557398fdda887c8b3c1db248822716206c61ef822daddd1_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -221,7 +230,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/ga692bf2e75df2b866e18c968f2f44d3a5176e728adcb37fe917abb26caeac3c5897b5fa392867de5f95a3c1debc19dd1_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/ga692bf2e75df2b866e18c968f2f44d3a5176e728adcb37fe917abb26caeac3c5897b5fa392867de5f95a3c1debc19dd1_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -232,7 +241,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g2fc68cf0f63d2112c75f211d1d83c2b12a26c06d9ade2b09ef9bac29f4706281e5e918bf479f5eb7c31ca1fa3032da8c_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g2fc68cf0f63d2112c75f211d1d83c2b12a26c06d9ade2b09ef9bac29f4706281e5e918bf479f5eb7c31ca1fa3032da8c_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
@@ -243,7 +252,7 @@
         <h4 class="card-title"><b>Cats</b></h4>
         <p class="card-text" style="position: absolute; top: 10px; right: 10px;"><small class="text-body-secondary">10/05</small></p>
       </div>
-      <img src="https://randompicturegenerator.com/img/cat-generator/g153d8808a70e3ac80924d50cc7f31b2c6fdf0cfd8ce681b5827805b9958c19d6a12f0e1a1bee957d1629357239959ee0_640.jpg" class="card-img-top" alt="...">
+      <img src="https://randompicturegenerator.com/img/cat-generator/g153d8808a70e3ac80924d50cc7f31b2c6fdf0cfd8ce681b5827805b9958c19d6a12f0e1a1bee957d1629357239959ee0_640.jpg" class="card-img" alt="...">
       <div class="card-body">
         <p class="card-text"><b>206 Likes</b></p>
         <p class="card-text">La vida es más divertida con un gato a tu lado. 😺 #MiauVibes</p>
